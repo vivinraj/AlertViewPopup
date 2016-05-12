@@ -19,6 +19,26 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func alertControl(sender: AnyObject) {
+        alertPopup()
+    }
+    
+    func alertPopup(){
+        let nextAlert = UIAlertController()
+        nextAlert.title = "Attention"
+        nextAlert.message = "Just checking"
+        
+        let okButton = UIAlertAction(title: "ok", style: UIAlertActionStyle.Default){
+            action in self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        
+        
+        
+        self.presentViewController(nextAlert, animated: true, completion: nil)
+        
+    }
 
 
 }
